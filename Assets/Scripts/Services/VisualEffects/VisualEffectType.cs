@@ -4,5 +4,10 @@ namespace Sorter.Services.VFX
     {
         Undefined = 0,
         
+        DestroySmoke,
+        MatchSquare,
+        MatchCircle,
+        MatchTriangle,
+        MatchStar
     }
 }
