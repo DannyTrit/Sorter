@@ -25,6 +25,8 @@ namespace Sorter.Services.UI
 		//UITypes Auto-generated code start
 		public UITypesProvider()
 		{
+			_data.Add(typeof(Sorter.UI.EndGame.EndGameView), new ViewAsset("EndGameView", typeof(Sorter.UI.EndGame.EndGameViewModel), typeof(Sorter.UI.EndGame.EndGameModel)));
+			_data.Add(typeof(Sorter.UI.Gameplay.GameplayView), new ViewAsset("GameplayView", typeof(Sorter.UI.Gameplay.GameplayViewModel), typeof(Sorter.UI.Gameplay.GameplayModel)));
 		}
 		//UITypes Auto-generated code end
 
