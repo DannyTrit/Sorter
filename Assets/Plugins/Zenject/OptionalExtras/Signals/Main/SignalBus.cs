@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using ModestTree;
-#if ZEN_SIGNALS_ADD_UNIRX
-using UniRx;
+#if ZEN_SIGNALS_ADD_R3
+using R3;
 #endif
 
 namespace Zenject
@@ -205,23 +205,23 @@ namespace Zenject
             }
         }
 
-#if ZEN_SIGNALS_ADD_UNIRX
-        public IObservable<TSignal> GetStreamId<TSignal>(object identifier)
+#if ZEN_SIGNALS_ADD_R3
+        public Observable<TSignal> GetStreamId<TSignal>(object identifier)
         {
             return GetStreamId(typeof(TSignal), identifier).Select(x => (TSignal)x);
         }
 
-        public IObservable<TSignal> GetStream<TSignal>()
+        public Observable<TSignal> GetStream<TSignal>()
         {
             return GetStreamId<TSignal>(null);
         }
 
-        public IObservable<object> GetStreamId(Type signalType, object identifier)
+        public Observable<object> GetStreamId(Type signalType, object identifier)
         {
             return GetDeclaration(new BindingId(signalType, identifier)).Stream;
         }
 
-        public IObservable<object> GetStream(Type signalType)
+        public Observable<object> GetStream(Type signalType)
         {
             return GetStreamId(signalType, null);
         }

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using ModestTree;
 using ModestTree.Util;
-#if ZEN_SIGNALS_ADD_UNIRX
-using UniRx;
+#if ZEN_SIGNALS_ADD_R3
+using R3;
 #endif
 
 namespace Zenject
@@ -29,7 +29,7 @@ namespace Zenject
         [Inject(Optional = true, Id = "Late", Source = InjectSources.Local)]
         readonly List<ValuePair<Type, int>> _latePriorities = null;
 
-#if ZEN_SIGNALS_ADD_UNIRX
+#if ZEN_SIGNALS_ADD_R3
         readonly Subject<Unit> _tickStream = new Subject<Unit>();
         readonly Subject<Unit> _lateTickStream = new Subject<Unit>();
         readonly Subject<Unit> _fixedTickStream = new Subject<Unit>();
@@ -46,18 +46,18 @@ namespace Zenject
         {
         }
 
-#if ZEN_SIGNALS_ADD_UNIRX
-        public IObservable<Unit> TickStream
+#if ZEN_SIGNALS_ADD_R3
+        public Observable<Unit> TickStream
         {
             get { return _tickStream; }
         }
 
-        public IObservable<Unit> LateTickStream
+        public Observable<Unit> LateTickStream
         {
             get { return _lateTickStream; }
         }
 
-        public IObservable<Unit> FixedTickStream
+        public Observable<Unit> FixedTickStream
         {
             get { return _fixedTickStream; }
         }

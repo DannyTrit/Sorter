@@ -8,3 +8,5 @@
 *.DS_Store
 *.bundle
 *.bundle.meta
+/Assets/Packages/
+/Assets/Packages.meta

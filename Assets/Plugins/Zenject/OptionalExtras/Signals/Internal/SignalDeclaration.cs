@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using ModestTree;
-#if ZEN_SIGNALS_ADD_UNIRX
-using UniRx;
+#if ZEN_SIGNALS_ADD_R3
+using R3;
 #endif
 
 namespace Zenject
@@ -16,7 +16,7 @@ namespace Zenject
         readonly bool _isAsync;
         readonly ZenjectSettings.SignalSettings _settings;
 
-#if ZEN_SIGNALS_ADD_UNIRX
+#if ZEN_SIGNALS_ADD_R3
         readonly Subject<object> _stream = new Subject<object>();
 #endif
 
@@ -34,8 +34,8 @@ namespace Zenject
             TickPriority = bindInfo.TickPriority;
         }
 
-#if ZEN_SIGNALS_ADD_UNIRX
-        public IObservable<object> Stream
+#if ZEN_SIGNALS_ADD_R3
+        public Observable<object> Stream
         {
             get { return _stream; }
         }
@@ -103,11 +103,9 @@ namespace Zenject
 
         void FireInternal(List<SignalSubscription> subscriptions, object signal)
         {
-            if (subscriptions.IsEmpty()
-#if ZEN_SIGNALS_ADD_UNIRX
-                && !_stream.HasObservers
-#endif
-                )
+            
+#if !ZEN_SIGNALS_ADD_R3
+            if (subscriptions.IsEmpty())
             {
                 if (_missingHandlerResponses == SignalMissingHandlerResponses.Warn)
                 {
@@ -119,6 +117,7 @@ namespace Zenject
                         "Fired signal '{0}' but no subscriptions found!  If this is intentional then either add OptionalSubscriber() to the binding or change the default in ZenjectSettings", signal.GetType());
                 }
             }
+#endif
 
             for (int i = 0; i < subscriptions.Count; i++)
             {
@@ -132,7 +131,7 @@ namespace Zenject
                 }
             }
 
-#if ZEN_SIGNALS_ADD_UNIRX
+#if ZEN_SIGNALS_ADD_R3
             _stream.OnNext(signal);
 #endif
         }

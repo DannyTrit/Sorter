@@ -9,7 +9,8 @@
 * Addressables
 
 ## Примечания
-Настройка стартовых параметров происходит в ScriptableObject (Asses/Content/Scriptables/GameSettings.asset)
+- При первом запуске проекта необходимо загрузить R3 NuGet зависимости (NuGet > Restore Packages)
+- Настройка стартовых параметров происходит в ScriptableObject (Asses/Content/Scriptables/GameSettings.asset)
 
 ## Технические требования
 * Unity 6000.1.11f1

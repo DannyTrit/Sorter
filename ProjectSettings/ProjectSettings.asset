@@ -679,7 +679,7 @@ PlayerSettings:
     PS5: DOTWEEN
     QNX: DOTWEEN
     ReservedCFE: DOTWEEN
-    Standalone: DOTWEEN;ZEN_SIGNALS_ADD_UNIRX
+    Standalone: DOTWEEN;ZEN_SIGNALS_ADD_R3
     VisionOS: DOTWEEN
     WebGL: DOTWEEN
     Windows Store Apps: DOTWEEN
