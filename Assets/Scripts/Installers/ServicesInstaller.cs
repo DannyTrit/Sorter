@@ -1,3 +1,5 @@
+using System.Linq;
+using System.Reflection;
 using Sorter.Input;
 using Sorter.Services.UI;
 using UnityEngine;
@@ -8,6 +10,7 @@ namespace Sorter.Installers
     public class ServicesInstaller : MonoInstaller
     {
         [SerializeField] private UIRoot _uiRoot;
+        [SerializeField] private GameComponents _gameComponents;
         
         public override void InstallBindings()
         {
