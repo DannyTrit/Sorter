@@ -11,8 +11,19 @@ namespace Sorter.Installers
         
         public override void InstallBindings()
         {
+            BindSignals();
+            
             Container.BindInterfacesTo<InputController>().AsSingle().WithArguments(_uiRoot);
             Container.BindInterfacesAndSelfTo<UIService>().AsSingle().WithArguments(_uiRoot);
+        }
+        
+        private void BindSignals()
+        {
+            SignalBusInstaller.Install(Container);
+            Assembly.GetExecutingAssembly()
+                .GetTypes()
+                .Where(x => x.IsDefined(typeof(SignalAttribute), false))
+                .ForEach(signal => Container.DeclareSignal(signal));
         }
     }
 }
