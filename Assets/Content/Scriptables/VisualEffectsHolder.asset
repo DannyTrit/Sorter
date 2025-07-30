@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52970fbd254443ef98ccd269b2c4d6dc, type: 3}
+  m_Name: VisualEffectsHolder
+  m_EditorClassIdentifier: 
+  _visualEffects:
+    m_keys: 0100000002000000030000000400000005000000
+    m_values:
+    - _reference:
+        m_AssetGUID: b1d8a4535cc9d234d88b5e50e465ca20
+        m_SubObjectName: 
+        m_SubObjectType: 
+        m_SubObjectGUID: 
+        m_EditorAssetChanged: 0
+    - _reference:
+        m_AssetGUID: 2308ce3a89b27bd42bf208c7c6625ab7
+        m_SubObjectName: 
+        m_SubObjectType: 
+        m_SubObjectGUID: 
+        m_EditorAssetChanged: 0
+    - _reference:
+        m_AssetGUID: ed344f4ee60777c419846703441a9222
+        m_SubObjectName: 
+        m_SubObjectType: 
+        m_SubObjectGUID: 
+        m_EditorAssetChanged: 0
+    - _reference:
+        m_AssetGUID: e1be2eb63a9e4e7489745f465a6464e9
+        m_SubObjectName: 
+        m_SubObjectType: 
+        m_SubObjectGUID: 
+        m_EditorAssetChanged: 0
+    - _reference:
+        m_AssetGUID: cb149601265e7a940a9346035c1af415
+        m_SubObjectName: 
+        m_SubObjectType: 
+        m_SubObjectGUID: 
+        m_EditorAssetChanged: 0
