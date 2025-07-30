@@ -1,0 +1,10 @@
+﻿/Library/
+/Logs/
+/obj/
+/Temp/
+/.idea/
+*.csproj
+*.sln
+*.DS_Store
+*.bundle
+*.bundle.meta
