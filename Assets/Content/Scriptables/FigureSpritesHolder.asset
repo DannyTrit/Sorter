@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601b0ebb5d1246869736e1543fc9f1cb, type: 3}
+  m_Name: FigureSpritesHolder
+  m_EditorClassIdentifier: 
+  _sprites:
+    m_keys: 01000000020000000300000004000000
+    m_values:
+    - {fileID: -535473267343018830, guid: 37e228f94d9934b478d145f900529639, type: 3}
+    - {fileID: 417458965390576970, guid: 37e228f94d9934b478d145f900529639, type: 3}
+    - {fileID: 7824246518324773442, guid: 37e228f94d9934b478d145f900529639, type: 3}
+    - {fileID: -4906696744660455707, guid: 37e228f94d9934b478d145f900529639, type: 3}
